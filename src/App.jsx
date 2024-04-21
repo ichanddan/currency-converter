@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import React from 'react'
+import { Convertor } from './components/Convertor'
 
-function App() {
-
+export default function App() {
   return (
-    <>
-    </>
+    <div>
+      <Convertor/>
+    </div>
   )
 }
-
-export default App
