@@ -7,7 +7,7 @@ import { SiConvertio } from "react-icons/si";
 
 export const Convertor = () => {
   const [rates, setRates] = useState({});
-  const [amount, setAmount] = useState(7);
+  const [amount, setAmount] = useState();
   const [toamount, setToAmount] = useState("USD");
   const [fromamount, setFromAmount] = useState("INR");
   const [convert, setConvert] = useState();
