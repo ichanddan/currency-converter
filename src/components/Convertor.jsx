@@ -43,7 +43,7 @@ export const Convertor = () => {
     <div className="flex items-center justify-center mt-10">
       <div className="w-1/2 border p-6 rounded-2xl flex items-center justify-center flex-col overflow-hidden fix-width">
         <h1 className="text-4xl">Currency Convertor</h1>
-        <div className="w-full mt-5">
+        <div className="w-full mt-5 pl-6">
           <input
             type="text"
             placeholder="Enter your amount"
