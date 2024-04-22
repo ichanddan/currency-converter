@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { HiSwitchHorizontal } from "react-icons/hi";
+import { SiConvertio } from "react-icons/si";
+
+
 
 export const Convertor = () => {
   const [rates, setRates] = useState({});
@@ -26,13 +30,20 @@ export const Convertor = () => {
     const a = (amount * rates[toamount]).toFixed(2);
     setConvert(a);
   };
+  
+  const handleSwitch = () => {
+    const temp = fromamount;
+    setFromAmount(toamount);
+    setToAmount(temp);
+  };
 
   document.title = "Currency Converter";
 
   return (
     <div className="flex items-center justify-center mt-10">
-      <div className="w-1/2 border p-6 rounded-2xl flex items-center justify-center">
-        <div className="w-full">
+      <div className="w-1/2 border p-6 rounded-2xl flex items-center justify-center flex-col">
+        <h1 className="text-4xl">Currency Convertor</h1>
+        <div className="w-full mt-5">
           <input
             type="text"
             placeholder="Enter your amount"
@@ -86,12 +97,20 @@ export const Convertor = () => {
             onClick={handleSubmit}
             className="p-1.5 bg-fuchsia-600 w-11/12 rounded-md mt-3 text-white hover:bg-black text-w"
           >
-            Convert
+            <div className="flex items-center justify-center">
+            <SiConvertio />Convert
+            </div> 
           </button>
-          {convert!== 0 &&(
-            <h1 className="text-center mt-10 text-4xl">{`${amount} ${fromamount} equals ${convert} ${toamount}`}</h1>
+          <button
+            onClick={handleSwitch}
+            className="p-1.5 bg-gray-600 w-11/12 rounded-md mt-3 text-white hover:bg-black text-w"
+          >
+            <div className="flex items-center justify-center">
+            <HiSwitchHorizontal />Switch
+            </div>
 
-          )}
+          </button>
+          <h1 className="text-center mt-10 text-6xl">{convert} {toamount}</h1>
         </div>
       </div>
     </div>
