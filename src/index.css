@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media screen and (max-width:700px) {
+    .fix-width{
+        width: 95%;
+    }
+    .fix-h1{
+        /* font-size: 40px; */
+    }
+}

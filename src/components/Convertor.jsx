@@ -41,7 +41,7 @@ export const Convertor = () => {
 
   return (
     <div className="flex items-center justify-center mt-10">
-      <div className="w-1/2 border p-6 rounded-2xl flex items-center justify-center flex-col">
+      <div className="w-1/2 border p-6 rounded-2xl flex items-center justify-center flex-col overflow-hidden fix-width">
         <h1 className="text-4xl">Currency Convertor</h1>
         <div className="w-full mt-5">
           <input
@@ -110,7 +110,7 @@ export const Convertor = () => {
             </div>
 
           </button>
-          <h1 className="text-center mt-10 text-6xl">{convert} {toamount}</h1>
+          <h1 className="text-center mt-10 text-6xl fix-h1">{convert} {toamount}</h1>
         </div>
       </div>
     </div>
